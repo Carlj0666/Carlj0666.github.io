@@ -1,11 +1,11 @@
 # Site settings
-author: Carl J
-title: 
+author: Carl
+title: It's all in the journey
 header-img: img/home-bg.png
 email: carlj1881@yahoo.com
-copyright_name: Carl J
+copyright_name: Carl
 description: > # this means to ignore newlines until "baseurl:"
-  
+  First Steps
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  Carlj0666
