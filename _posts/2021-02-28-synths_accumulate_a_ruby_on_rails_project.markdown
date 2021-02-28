@@ -25,15 +25,15 @@ We had the fortune of drilling MVC and naming conventions that translate well fr
 * No scaffolding!
 
 ## Active Record you old dog!
-Active record plays a big roll in this project and it's so important to have a good grasp on your model associations but don't over think it! You are using an idea, a metaphor for a thing, and making a model out of it with it's parts all labeled and nicely setup. Think about how those things relate, does it make sense? It really needs to or come time to code those relationships and deciding how things work become way more difficult! The actual associations are not as hard as the time we put into thinking about th way they will interact and be functional together, think, but don't over think it. You can tell I've thought about this.
+Active record plays a big roll in this project and it's so important to have a good grasp on your model associations but don't over think it! You are using an idea, a metaphor for a thing, and making a model out of it with it's parts all labeled and nicely setup. Think about how those things relate, does it make sense? It really needs to or come time to code those relationships and deciding how things work become way more difficult! The actual associations are not as hard as the time we put into thinking about the way they will interact and be functional together. Think, but don't over think it. You can tell I've thought about this.
 
 ## Validations are valid
-Yep, security for your apps is way cool! If it can be stickered, chipped at, wheat pasted, broken into, toilet papered or otherwise, someone will do it. Validates and using scope within validations is really interesting. You can do a lot in just lines of code to protect your database from strange data so your prices aren blank, or $qwerty.95, or so you don't have 100 "unique" items in your list! You can check for: Presence, Uniqueness and Numericality to name a few!
+Yep, security for your apps is way cool! If it can be stickered, chipped at, wheat pasted, broken into, toilet papered or otherwise, someone will do it. Validates and using scope within validations is a great tool to prevent this. You can do a lot in just a few lines of code to protect your database from strange data so your prices aren blank, or $qwerty.95, or so you don't have 100 "unique" items in your list! You can check for: Presence, Uniqueness and Numericality to name just a few.
 
 ## How not to get lost on Rails
-My best advice, ASK QUESTIONS! This project and some of the concepts that we cover are pretty complex and combined into assemblies they can be positively labyrinthine! Even though we are on Rails, it's easy to miss a stop or take the wrong fork so ask directions from your instructor if you are feeling lost. Stop and meet with your fellow students to compare your ideas. It takes time but the concepts will come together like the previous ones did : )
+My best advice, ASK QUESTIONS! This project and some of the concepts that we cover are pretty complex and combined into assemblies they can be positively labyrinthine! Even though we are on Rails, it's easy to miss a stop or take the wrong fork so ask directions from your instructor if you are feeling lost. Stop and meet with your fellow students to compare your ideas. It takes time but the concepts will come together like the previous ones did so hang on! : )
 
-## Projects show us the whole picture
-I love project time! Bringing it all together really serves to paint the bigger picture of how all these fantastic tools are related, and how much we can build do with them! The train stops here...
+## Projects show us the landscape
+I love project time! Bringing it all together really serves to paint a bigger picture of how all these fantastic tools are related, and how much we can do with them! That's all for now so, the train stops here...
 
 
