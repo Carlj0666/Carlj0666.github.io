@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Synths Accumulate, A Ruby on Rails Project"
-date:       2021-02-28 22:40:10 +0000
+date:       2021-02-28 17:40:11 -0500
 permalink:  synths_accumulate_a_ruby_on_rails_project
 ---
 
