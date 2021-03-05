@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Params, not just a clever name."
-date:       2021-03-05 03:07:08 +0000
+date:       2021-03-04 22:07:08 -0500
 permalink:  params_not_just_a_clever_name
 ---
 
@@ -38,7 +38,7 @@ In this show action we can see that the dynamic segment :id will get passed the 
 
 ### What about Strong Params?
 
-Strong params protects your database by only allowing certain "whitlisted" attributes to be saved to the database.
+Strong params protects your database by only allowing certain "whitelisted" attributes to be saved to the database.
 
 ```
 def synth_params
