@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Has_many & belongs_to have many methods!"
-date:       2021-03-05 01:55:22 +0000
+date:       2021-03-04 20:55:22 -0500
 permalink:  has_many_and_belongs_to_have_many_methods
 ---
 
@@ -98,3 +98,54 @@ Does the same as collection.create, but raises ActiveRecord::RecordInvalid if th
 
 * collection.reload<br>
 Returns a Relation of all of the associated objects, forcing a database read. An empty Relation is returned if none are found.
+
+### Lot's to do
+Here's an example of how I used one of the above methods in my recent project. I broke down the steps in a pry:
+
+I placed the pry before the (collection.build) method (@tech.synths.build). This time there's no data:
+```
+[3] pry(#<TechesController>)> @tech.synths.build
+=> #<Synth:0x00007f9f92c38640
+ id: nil,
+ name: nil,
+ brand: nil,
+ hybrid: nil,
+ price: nil,
+ description: nil,
+ user_id: nil,
+ tech_id: nil,
+ created_at: nil,
+ updated_at: nil>
+```
+Here I saved the instance in the varibale new_synth, then use build, and add in the attributes that would usually come from the form being submitted:
+
+```pry(#<TechesController>)> new_synth = @tech.synths.build(name: "name for build", brand: "builders brand", hybrid: true, price: 199.00, description: "This is how we build it")
+```
+=> #<Synth:0x00007f9fb2efe260
+ id: nil,
+ name: "name for build",
+ brand: "builders brand",
+ hybrid: true,
+ price: 199.0,
+ description: "This is how we build it",
+ user_id: nil,
+ tech_id: nil,
+ created_at: nil,
+ updated_at: nil>
+ ```
+ And here you see the new synth!
+ 
+ ```
+ [10] pry(#<TechesController>)> new_synth
+=> #<Synth:0x00007f9fb2efe260
+ id: nil,
+ name: "name for build",
+ brand: "builders brand",
+ hybrid: true,
+ price: 199.0,
+ description: "This is how we build it",
+ user_id: nil,
+ tech_id: nil,
+ created_at: nil,
+ updated_at: nil>
+```
