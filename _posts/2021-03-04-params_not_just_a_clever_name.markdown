@@ -59,13 +59,13 @@ def create
 
 Just for fun, You can see heere how strong params protects your site!
 Using the inspector we can see the price field:
-![](https://imgur.com/wJMpA8c)
+![](https://i.imgur.com/wJMpA8c.png)
 Here I've changed price to balance:
-![](https://imgur.com/9uY7fPj)
+![](https://i.imgur.com/9uY7fPj.png)
 Now I enter in the desired balance:
-![](https://imgur.com/6O34k7s)
+https://i.imgur.com/6O34k7s.png
 Here you can see the errors but you'll notice that the balance has changed back to price.
-![](https://imgur.com/W0lRMF1)
+https://i.imgur.com/W0lRMF1.png
 
 ```
 [4] pry(#<SynthsController>)> @synth.errors
