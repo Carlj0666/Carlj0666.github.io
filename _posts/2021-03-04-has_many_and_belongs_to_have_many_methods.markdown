@@ -74,6 +74,7 @@ There's ***17*** methods tht come with has_many!<br>
 Here's an example of how I used one of the above methods in my recent project. I broke down the steps in a pry:
 
 I placed the pry before the (collection.build) method (@tech.synths.build). This time there's no data:
+
 ```
 [3] pry(#<TechesController>)> @tech.synths.build
 => #<Synth:0x00007f9f92c38640
@@ -88,10 +89,12 @@ I placed the pry before the (collection.build) method (@tech.synths.build). This
  created_at: nil,
  updated_at: nil>
 ```
+
 Here I saved the instance in the variable new_synth so we can check it later, then I used .build, and added in the attributes:
 
-```pry(#<TechesController>)> new_synth = @tech.synths.build(name: "name for build", brand: "builders brand", hybrid: true, price: 199.00, description: "This is how we build it")
-```
+`pry(#<TechesController>)> new_synth = @tech.synths.build(name: "name for build", brand: "builders brand", hybrid: true, price: 199.00, description: "This is how we build it")`
+
+
 ```
 => #<Synth:0x00007f9fb2efe260
  id: nil,
@@ -104,7 +107,8 @@ Here I saved the instance in the variable new_synth so we can check it later, th
  tech_id: nil,
  created_at: nil,
  updated_at: nil>
- ```
+```
+
  And here you see the new synth!
  
  ```
@@ -122,7 +126,10 @@ Here I saved the instance in the variable new_synth so we can check it later, th
  updated_at: nil>
 ```
 Here's several BUILT at the same time:
-```pry(#<TechesController>)> @tech.synths.build([{name: 'Gimme a B'}, {name: 'U'}, {name: 'I'}, {name: 'L'}, {name: 'D'}])=> [#<Synth:0x00007ffe2f3650f8
+
+
+```
+pry(#<TechesController>)> @tech.synths.build([{name: 'Gimme a B'}, {name: 'U'}, {name: 'I'}, {name: 'L'}, {name: 'D'}])=> [#<Synth:0x00007ffe2f3650f8
   id: nil,
   name: "Gimme a B",
   brand: nil,
@@ -177,7 +184,7 @@ Here's several BUILT at the same time:
   tech_id: nil,
   created_at: nil,
   updated_at: nil>]
-	```
+```
 	
-	#### So there's all kinds of awesome and powerful methods that come with those "little" macros has_many and belongs_to! That's all for now!
+So there's all kinds of awesome and powerful methods that come with those "little" macros has_many and belongs_to! That's all for now!
 	
