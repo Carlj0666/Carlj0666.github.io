@@ -63,9 +63,9 @@ Using the inspector we can see the price field:
 Here I've changed price to balance:
 ![](https://i.imgur.com/9uY7fPj.png)
 Now I enter in the desired balance:
-![]https://i.imgur.com/6O34k7s.png
+![](https://i.imgur.com/6O34k7s.png)
 Here you can see the errors but you'll notice that the balance has changed back to price.
-![]https://i.imgur.com/W0lRMF1.png
+![](https://i.imgur.com/W0lRMF1.png)
 
 ```
 [4] pry(#<SynthsController>)> @synth.errors
