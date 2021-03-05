@@ -23,9 +23,12 @@ It's the name of the attribute from the field in the above HTML form that provid
 
 * In a GET request, params get passed to the controller from the URL in the user’s browser.<br>
 
-EXAMPLE: `get '/synths/:id', to: 'synths#show'` <br>
-*So entering '/synths/1', means 1 is the params.*
-
+(EXAMPLE: `get '/synths/:id', to: 'synths#show'` <br>
+*So entering '/synths/1' passes in the 1 to the params. We can see in the pry the params shows as follows:*
+```
+"id"=>"12"
+```
+"key"=>"value"
 ```
 def show
     @synth = Synth.find(params[:id])
@@ -46,10 +49,42 @@ def synth_params
   end
 ```
 
-***Require*** looks for params[:synth] in the above example, and will throw an error if it's not there, it also prevents the bad data from being saved. ***Permit*** is followed by the list of permitted attributes. Once everything passes the save occurs! In short, we use Strong Params to protect the Database from bad data. 
+***Require*** looks for params[:synth] in the above example, and will throw an error if it's not there, it also prevents bad actors from using dev tools to tamper with things. ***Permit*** is followed by the list of permitted attributes. Once everything passes the save occurs! In short, we use Strong Params to protect the Database from bad data. 
 
 You can see it in use here passed in to a new Synth that we'll make and save with ***Create***:
 ```
 def create
     @synth = Synth.new(synth_params)
 ```
+
+Just for fun, You can see heere how strong params protects your site!
+Using the inspector we can see the price field:
+![](https://imgur.com/wJMpA8c)
+Here I've changed price to balance:
+![](https://imgur.com/9uY7fPj)
+Now I enter in the desired balance:
+![](https://imgur.com/6O34k7s)
+Here you can see the errors but you'll notice that the balance has changed back to price.
+![](https://imgur.com/W0lRMF1)
+
+```
+[4] pry(#<SynthsController>)> @synth.errors
+=> #<ActiveModel::Errors:0x00007f8f17f93190
+ @base=
+  #<Synth:0x00007f8ee6884628
+   id: nil,
+   name: "New balance synth",
+   brand: "Super Expensive!",
+   hybrid: false,
+   price: nil,
+   description: "Check my new balance!",
+   user_id: 1,
+   tech_id: 12,
+   created_at: nil,
+   updated_at: nil>,
+ @errors=
+  [#<ActiveModel::Error attribute=price, type=blank, options={}>,
+   #<ActiveModel::Error attribute=price, type=not_a_number, options={:value=>nil}>]>
+```
+You can see the errors generated above shows that the price type is blank. Since we changed it to balance, in the form, the price is nil. Cool!
+
