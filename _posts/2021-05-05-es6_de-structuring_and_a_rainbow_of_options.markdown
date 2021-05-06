@@ -29,7 +29,7 @@ console.log(bow)
 // (7) ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 
 ```
-The concept of passing by reference vs. passing by value comes into play when using the spread operator. Passing by reference refers to for instance declaring a variable (A), that references another variable (1), so (A) contains the reference to the value of (1). When passing by value, as one does with a spread operator, you effectivly clone the value of the referenced. When using this with object, the key and value pairs are copied into the new object. 
+The concept of passing by reference vs. passing by value comes into play when using the spread operator. Passing by reference refers to for instance declaring a variable (A), that references another variable (1), so (A) contains the reference to the value of (1). When passing by value, as one does with a spread operator, you effectivly clone the value of the referenced. When using this with objects, the key and value pairs are copied into the new object. Keep in mind that this is only true for non-primitives like arrays and objects.
 
 You can see here that the attributes from "newColors" are being copied into a new object:
 ```
