@@ -174,8 +174,6 @@ gimmeTheRainbow()
 // undefined
 ```
 
-So now thanks to ES6 and Arrow functions as long as the Arrow Function is "curly braced" we can get statements into the function body:
-
 ```
 const howManyRainbows = () => {
     const rainbowRandomizer = Math.random() > 0.5
