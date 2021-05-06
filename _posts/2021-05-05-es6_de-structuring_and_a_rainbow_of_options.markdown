@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "ES6, (...), de-structuring & (=>), a rainbow of options"
-date:       2021-05-06 02:00:00 +0000
+title:      "ES6, (...), destructuring & (=>), a rainbow of options"
+date:       2021-05-05 22:00:01 -0400
 permalink:  es6_de-structuring_and_a_rainbow_of_options
 ---
 
@@ -29,11 +29,16 @@ console.log(bow)
 // (7) ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 
 ```
+The concept of passing by reference vs. passing by value comes into play when using the spread operator. Passing by reference refers to for instance declaring a variable (A), that references another variable (1), so (A) contains the reference to the value of (1). When passing by value, as one does with a spread operator, you effectivly clone the value of the referenced. When using this with object, the key and value pairs are copied into the new object. 
 
-## De-Structuring
+You can see here that the attributes from "newColors" are being copied into a new object:
+```
+const newColors = new Color({id: color.data.id, ...colordata.attributes})
+```
+## Destructuring
 <img src="https://www.wallpapertip.com/wmimgs/79-791323_colors-colorful-abstract-blue-purple-red-orange-yellow.jpg" alt="Red, Yellow, Blue and Violet" width="600px"/>
 
-ES6 also provides de-structuring. De-sctructuring gives us a quick way to declare and assign variables. One way we can do with arrays is like the following: 
+ES6 also provides destructuring. Desctructuring gives us a quick way to declare and assign variables. One way we can do with arrays is like the following: 
 ```
 const rainbowArray =["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 let colorR = rainbowArray[0]
@@ -45,7 +50,7 @@ let colorI = rainbowArray[5]
 let colorV = rainbowArray[6]
 ```
 
-Let's try it with de-structuring this time:
+Let's try it with destructuring this time:
 
 ```
 const rainbowArray =["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
@@ -116,28 +121,6 @@ function rainbowMaker ({colorR, colorO, colorY, colorG, colorB, colorI, colorV})
 ```
 rainbowMaker(rainbowObject)
 // "<div>\n\t\t<p>red</p>\n\t\t<p>orange</p>\n\t\t<p>yellow</p>\n\t\t<p>green</p>\n\t\t<p>blue</p>\n\t\t<p>indigo</p>\n\t\t<p>violet</p>\n\t\t</div>"
-```
-
-I used this in my JS project as follows:
-
-```
-  const config = {
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json",
-      Accept: "application/json"
-    }
-  }
-undefined
-```
-
-The resulting object from the console:
-```
-config
-// {method: "POST", headers: {…}}
-// headers: {Content-Type: "application/json", Accept: "application/json"}
-// method: "POST"
-// __proto__: Object
 ```
 
 ## Arrow function => Return Statements
