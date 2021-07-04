@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "And they said it would be tough...it was tougher!"
-date:       2021-07-04 02:03:32 +0000
+title:      "End of the cohort, JS/React/Redux and the path ahead"
+date:       2021-07-03 22:03:32 -0400
 permalink:  and_they_said_it_would_be_tough_it_was_tougher
 ---
 
