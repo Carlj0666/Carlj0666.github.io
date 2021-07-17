@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Mapping Dispatch to Props: An analytical interpretation."
-date:       2021-07-17 00:41:26 +0000
+date:       2021-07-16 20:41:26 -0400
 permalink:  mapping_dispatch_to_props_an_analytical_interpretation
 ---
 
@@ -58,7 +58,7 @@ I have a similar setup in my **<Form />** component, where a new inkblot is crea
 export default connect(null, mapDispatchToProps)(ImageForm)
 ```
 
-In line 3 in the mapDispatchToProps, the **inkblot** is being passed in as a parameter to the createInkblots function. in this case, the parameter was submited via the form in the handleSubmit below, **inkblot** represents the **state** of the form, passed in as **this.state** in line 4 of the handleSubmit.. 
+In line 3 in the mapDispatchToProps, the **inkblot** is being passed in as a parameter to the createInkblots function. in this case, the parameter was submitted via the form in the handleSubmit below, **inkblot** represents the **state** of the form, passed in as **this.state** in line 4 of the handleSubmit.. 
 
 In my handleSubmit in the <Form />, you can see **createInkblots** being referenced as a prop. From here createInkblots is fired off...
 
