@@ -39,12 +39,11 @@ Mapping dispatch to props allows us to make *action dispatching functions, as pr
 ```
 *fetchInkblots can now dispatch actions as you see above in line 3*
 
-
-By defining **fetchInkblots** inside of our mapDispatchToProps, like in the first code snippet, we can then execute it by referencing it as a **prop** since we have mapped this dispatch...to props. Also, it's important to note that we use **Thunk** middleware. **Thunk** allows us to write action creators that return functions instead of only actions. On line 2 in the example above we are passing dispatch to the outer function, **Thunk** makes this possible. Thunk can see that dispatch is being called with an argument of a function, it then passes dispatch as an argument on line 2. From there we can call dispatch inside the inner function, and pass it an argument of the action created when we invoke **setInkblots**. This allows us to call the fetch within our actions.
-
 ```
  this.props.fetchInkblots()
 ```
+
+By defining **fetchInkblots** inside of our mapDispatchToProps, like in the first code snippet, we can then execute it by referencing it as a **prop** since we have mapped this dispatch...to props. Also, it's important to note that we use **Thunk** middleware. **Thunk** allows us to write action creators that return functions instead of only actions. On line 2 in the example above we are passing dispatch to the outer function, **Thunk** makes this possible. Thunk can see that dispatch is being called with an argument of a function, it then passes dispatch as an argument on line 2. From there we can call dispatch inside the inner function, and pass it an argument of the action created when we invoke **setInkblots**. This allows us to call the fetch within our actions.
 
 I have a similar setup in my **<Form />** component, where a new inkblot is created:
 
