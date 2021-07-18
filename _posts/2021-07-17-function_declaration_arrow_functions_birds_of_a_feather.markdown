@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Function Declaration, Arrow Functions, Birds of a feather?"
-date:       2021-07-18 01:36:27 +0000
+date:       2021-07-17 21:36:27 -0400
 permalink:  function_declaration_arrow_functions_birds_of_a_feather
 ---
 
