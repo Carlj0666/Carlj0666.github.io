@@ -111,7 +111,6 @@ Result: "My bird's name is Illest"
 ```
 Wait wha? Yep! Because of hoisting, even though we declared the birds name before the function declaration, the function still works because of *context execution*. 
 
-**To be clear, since arrow functions are function declarations and not traditional functions, they are not hoisted. To illustrate this in an arrow function, check out the below code snippet**
 
 ```
 eggCounter(1 ,2)
