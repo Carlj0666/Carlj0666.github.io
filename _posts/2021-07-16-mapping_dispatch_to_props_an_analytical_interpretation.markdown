@@ -26,16 +26,17 @@ Mapping dispatch to props allows us to make *action dispatching functions, as pr
 *You can see in the image above, that calling fetchInkblots in the console returns a function that itself contains a dispatch.*
 
 ```
-1 export const fetchInkblots = 
-2         (dispatch) => {
+1 export const fetchInkblots = () => {
+2         return (dispatch) => {
 3         dispatch({type: 'LOADING'})
 4         fetch(url)
-5         .then(resp => resp.json())
+5        .then(resp => resp.json())
 6         .then(json => {
 7             const inkblots = json.data
 8             dispatch(setInkblots(inkblots))
-9             })
-10        }
+9         })
+10     }
+11 }
 ```
 *fetchInkblots can now dispatch actions as you see above in line 3*
 
