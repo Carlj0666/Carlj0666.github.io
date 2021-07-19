@@ -124,26 +124,7 @@ Result: Uncaught ReferenceError: Cannot access 'eggCounter' before initializatio
     at <anonymous>:1:1
 ```
 
-As you've seen, in order to keep a tidy nest, ES6's arrow functions are not **hoisted**. You can see in this example, taken from earlier, that the inner function called from outside of the parent function returns undefined:
 
-```
-const mommaBirdFunction = () => {
-     let eggsValue = 2;
-     console.log(eggsValue);
-
-     const eggLayerFunction = () => {
-          console.log(eggsValue += 1);
-     }
-
-  // eggLayerFunction() was here
-}
-
-mommaBirdFunction();
-eggLayerFunction();
-
-2
-Uncaught ReferenceError: eggLayerFunction is not defined
-```
 Javascript does hoist variables declared using *let*, but it does not initialize them, an important distinction between the majestic function declaration, and the mighty arrow function.
 
 #### *A note on return values:
